@@ -1,0 +1,86 @@
+Semi-filtros: Sai texto
+Filtro: Entra e sai texto
+
+# EXERCICIO 
+Supondo que tenho um ficheiro de texto e quero escolher uma linha aleatória
+
+grep 'w' f | shuf | head -n 1
+           | shuf -n 1
+
+```
+Explicação:
+
+    grep 'w' f
+        Procura por linhas no arquivo f que contenham a letra w.
+        Se f for um arquivo existente, ele filtra apenas as linhas que possuem w.
+        Se f não for encontrado, o comando falhará.
+
+    | shuf
+        O shuf embaralha as linhas de entrada de forma aleatória.
+        Ou seja, a saída do grep (as linhas que contêm w) será misturada aleatoriamente.
+
+    | head -n 1
+        O head -n 1 pega apenas a primeira linha da saída embaralhada.
+        Assim, ele retorna uma linha aleatória do conjunto filtrado.
+        No comando head -n 1, a opção -n especifica o número de linhas a serem exibidas da entrada.
+        head -n 1: Mostra apenas a primeira linha da entrada.
+        head -n 5: Mostra as cinco primeiras linhas.
+        head -n 10: Mostra as dez primeiras linhas (o padrão do head, se -n não for especificado).
+```
+
+
+Se tiver um filtro e se na linha de comandos tiver:
+
+> filtro -> considera o stdinput e stdoutput
+> filtro f1 f2 -> O comando provavelmente lê o conteúdo de f1 e f2, processa os dados e escreve o resultado na saída padrão (stdout).
+
+Suponde que tenho um programa x.py e quero instala-lo ficando disponivel para a comunidade:
+
+Nota:
+
+chmod +x x.py -> Isso permite que o arquivo seja executado como um programa.
+#!/usr/bin/env python -> permite que ele seja executado com Python automaticamente.
+
+📌 /usr/bin → Binários padrões do sistema.
+
+📌 /usr/local/bin → Binários instalados manualmente pelo usuário.
+
+📌 /usr/jj/bin → Diretório personalizado para seus próprios scripts.
+
+touch pyptoject.toml -> Cria um arquivo de configuração vazio chamado pyproject.toml.
+
+pyproject.toml -> configurações do projecto
+
+pip install . -> Instala o pacote a partir do diretório atual, usando as configurações do pyproject.toml.
+
+> flit build -> Esse comando criará os arquivos .tar.gz e .whl dentro do diretório dist/.
+
+```
+
+Built sdist: dist/rm_dup_lines-0.1.0.tar.gz                                                                                                                                           I-flit_core.sdist
+Copying package file(s) from /tmp/tmp5pk2mqjb/rm_dup_lines-0.1.0/rm_dup_lines.py                                                                                                      I-flit_core.wheel
+Writing metadata files                                                                                                                                                                I-flit_core.wheel
+Writing the record of files                                                                                                                                                           I-flit_core.wheel
+Built wheel: dist/rm_dup_lines-0.1.0-py2.py3-none-any.whl          
+```
+                
+O wheel é o modulo que pode ser usado para distribuição
+pip install http://example.com/rm_dup_lines-0.1.0-py2.py3-none-any.whl
+
+pip wheel .
+
+flit install -s -> compilar o programa sem precisar de estar sempre a fazer pip install . cada vez que faço alterações 
+
+
+
+from collections import Counter
+>>> a = Counter([17,34,12,12])
+>>> a
+Counter({12: 2, 17: 1, 34: 1})
+>>> a+a
+Counter({12: 4, 17: 2, 34: 2})
+>>> a.total()
+4 # soma os elementos todos de a = 2+1+1=4
+
+>>> a.most_common(1)
+[(12, 2)]

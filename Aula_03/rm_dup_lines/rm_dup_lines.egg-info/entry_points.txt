@@ -1,0 +1,2 @@
+[console_scripts]
+rl = rm_dup_lines:main
