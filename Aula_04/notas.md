@@ -1,0 +1,1 @@
+Usar o pytest na pasta testes
