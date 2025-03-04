@@ -8,3 +8,4 @@ dependencies=["jjcli"]
 
 [project.scripts]
 ftk-occ="ftk.base:main"
+ftk-freq="ftk.calc_occ:main"

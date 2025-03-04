@@ -1,0 +1,1 @@
+{'o': 19, 'menino': 10, 'de': 9, 'sua': 7, 'mãe': 15, 'é': 11, 'muito': 2, 'mais': 6, 'que': 6, 'do': 6, 'seu': 3, 'pai': 7, 'a': 10, 'importante': 2, 'porque': 4, 'nos': 1, 'dá': 1, 'ser': 4, 'tem': 4, 'sorriso': 3, 'da': 3, 'e': 7, 'doçura': 2, 'bonito': 1, 'quando': 1, 'vida': 3, 'feliz': 2, 'em': 1, 'pessoa': 1, 'sempre': 1}

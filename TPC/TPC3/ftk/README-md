@@ -1,0 +1,72 @@
+# Calculador de Frequência de Palavras
+
+Este script Python (`calc_occ.py`) calcula a frequência de ocorrência de palavras em arquivos de texto. Ele pode fornecer diferentes métricas de frequência com base nas opções fornecidas.
+
+## Uso
+
+```bash
+python3 calc_occ.py [opções] [palavra] arquivos*
+python3 calc_occ.py arquivos*
+```
+
+### Parâmetros:
+- **`palavra`**: A palavra cuja frequência deve ser calculada.
+- **`arquivos*`**: Lista de arquivos de texto para processar.
+- **`[opções]`**: Uma ou mais das seguintes opções:
+  - `-fa` : Frequência absoluta (número total de ocorrências da palavra).
+  - `-fr` : Frequência relativa (percentagem da palavra em relação ao total de palavras).
+  - `-fm` : Frequência relativa por milhão.
+  - `-log` : Logaritmo da frequência relativa.
+
+### Exemplos de Uso
+
+#### 1. Exibir apenas o dicionário de ocorrências das palavras nos arquivos:
+```bash
+python3 calc_occ.py arquivo1.txt arquivo2.txt
+```
+Saída esperada:
+```json
+{"palavra1": 10, "palavra2": 5, "palavra3": 2}
+```
+
+#### 2. Calcular a frequência absoluta de uma palavra:
+```bash
+python3 calc_occ.py -fa exemplo arquivo.txt
+```
+Saída esperada:
+```
+Frequência absoluta de 'exemplo': 5
+```
+
+#### 3. Calcular todas as frequências de uma palavra:
+```bash
+python3 calc_occ.py -fa -fr -fm -log exemplo arquivo.txt
+```
+Saída esperada:
+```
+Frequência absoluta de 'exemplo': 5
+Frequência relativa de 'exemplo': 0.125000%
+Frequência por milhão de 'exemplo': 1250.00 por milhão
+Logaritmo da frequência relativa de 'exemplo': -2.079442
+```
+
+## Como Funciona
+
+1. **`calc_occ(files)`**: Processa os arquivos e cria um dicionário com a contagem de cada palavra.
+2. **`calc_freq(word, occor, options)`**: Calcula a frequência da palavra escolhida com base nas opções fornecidas.
+3. **`main()`**: Gerencia a entrada do usuário e chama as funções apropriadas.
+
+## Tratamento de Erros
+- Se um arquivo não for encontrado, o programa exibirá uma mensagem de erro e encerrará a execução.
+- Se os argumentos não forem fornecidos corretamente, o programa exibirá uma mensagem explicativa.
+- Se a frequência relativa for zero, o logaritmo será definido como `-inf`.
+
+## Dependências
+O script utiliza apenas bibliotecas padrão do Python:
+- `sys`
+- `math`
+- `re`
+
+## Conclusão
+Este script é útil para análises textuais, como estudo de frequência de palavras em documentos. Ele permite cálculos simples e eficientes de frequência absoluta, relativa, por milhão e logaritmo da frequência relativa.
+
