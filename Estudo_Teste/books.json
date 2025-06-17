@@ -1,0 +1,14 @@
+{
+    "http://127.0.0.1:3000/Estudo_Teste/clinica_medica.html": [
+        {
+            "Title": "1) O guia do Jovem Internista",
+            "Link": "https://cssjd.org.br/O-guia-do-Jovem-Internista.pdf",
+            "download": "/download/Manual-de-Insuficiência-Cardíaca.pdf"
+        },
+        {
+            "Title": "2) Manual de Insuficiência Cardíaca",
+            "Link": "https://cssjd.org.br/Manual-de-Insuficiência-Cardíaca.pdf",
+            "download": "/download/Manual-de-Insuficiência-Cardíaca.pdf"
+        }
+    ]
+}

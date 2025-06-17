@@ -1,0 +1,18 @@
+{
+  "Ciclismo": {
+    "dificuldade": "Fácil",
+    "horario": [
+      "08:00 - 19:00",
+      "09:00 - 12:00"
+    ],
+    "instrutor": "João Silva"
+  },
+  "Natação": {
+    "dificuldade": "Médio",
+    "horario": [
+      "08:00 - 19:00",
+      "09:00 - 12:00"
+    ],
+    "instrutor": "João Silva"
+  }
+}
